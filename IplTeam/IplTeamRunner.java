@@ -169,6 +169,13 @@ public class IplTeamRunner {
 		castedDAO.findByNameandSponsorandCaptain("Ravindra Jadeja","Krishnan Murthy","CSK");
        castedDAO.getTotal();
 		
+       castedDAO.saveMultiple(ipldto14, ipldto2);
+       
+       castedDAO.saveMultiple(ipldto14, ipldto2);
+       
+       castedDAO.updateSponsorByName("PUNE Warriors", "SUYOG");
+       
+       castedDAO.updateCaptainByName("Hardik Pandya", "AKSHAY");
 	}
 
 }
