@@ -1,0 +1,5 @@
+class HorrorMovie{
+	
+	String name;
+	
+	

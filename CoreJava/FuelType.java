@@ -1,0 +1,5 @@
+enum FuelType{
+	   DIESEL,PETROLEUM,BIOFUEL,FOSSIL_FUEL;
+}
+
+	

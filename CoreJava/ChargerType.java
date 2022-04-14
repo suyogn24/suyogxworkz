@@ -1,0 +1,4 @@
+enum ChargerType{
+	    USB_CHARGER,MICRO_USB_CHARGER,LIGHTENING_CHARGER;
+		
+}
