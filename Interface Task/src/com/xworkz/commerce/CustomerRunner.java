@@ -16,13 +16,10 @@ public class CustomerRunner {
 	
 
 	public static void main(String[] args) {
+	
 		
-	CustomerDAO customerDAO=null;// new CustomerDAOImplementation();
 		
-		CustomerDAO customerdao=new CustomerDAOImplementation();
-		
-		customerdao.findByName("Suyog");
-		customerdao.save(null);
+		CustomerDAO customerDAO=new CustomerDAOImplementation();
 		
 		
 		
@@ -55,23 +52,13 @@ public class CustomerRunner {
        customerDTO.setAddressDTO(addressDTO);
        
 		
-		CustomerService customerService=null;//new CustomerServiceImplementation(customerDAO);
 		CustomerService customerServices=new CustomerServiceImplementation(customerDAO);
 		
 		
 		CustomerDTO foundByName=customerServices.findByName("AKSHAY");
-		System.out.println(foundByName);
-	
-		StateDTO stateDTO=null;
-		//init all variables		
-	    AddressDTO=null;
-		//init all variables
-		//addressDTO.setStateDTO(stateDTO);
-        CustomerDTO customerDTO=null;
-		//init all variables inclusing addressDTO
-		//customerDTO.setAddressDTO(addressDTO)
+     	System.out.println(foundByName);
 		
-		customerService.validateAndSave(customerDTO);
+		customerServices.validateAndSave(customerDTO);
 		
 
 	}

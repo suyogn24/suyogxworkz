@@ -1,7 +1,9 @@
 package com.xworkz.commerce.service;
 
 import com.xworkz.commerce.dao.CustomerDAO;
+import com.xworkz.commerce.dto.AddressDTO;
 import com.xworkz.commerce.dto.CustomerDTO;
+import com.xworkz.commerce.dto.StateDTO;
 
 public class CustomerServiceImplementation implements CustomerService {
 
@@ -76,7 +78,47 @@ public class CustomerServiceImplementation implements CustomerService {
 		System.out.println("Customer Email is incorrect");
 		return false;
 		}
-			
+	
+	StateDTO stateDTO = customerDTO.getAddressDTO().getStateDTO();
+	if (stateDTO.getId()<=0 || stateDTO.getId()>2000)  {
+		System.out.println("State ID is incorrect");
+		return false;
+	}
+	
+	if (stateDTO.getName().length()<3 || stateDTO.getName().length()>40)  {
+		System.out.println("State Name is incorrect");
+		return false;
+	}
+	
+	if (stateDTO.getNoOfDistricts()<=0 || stateDTO.getNoOfDistricts()>100)  {
+		System.out.println("State Numbers is incorrect");
+		return false;
+	}
+	
+	AddressDTO addressDTO = customerDTO.getAddressDTO();
+	if (addressDTO.getId()<=0 || addressDTO.getId()>1000)  {
+		System.out.println("Address ID is incorrect");
+		return false;
+	}
+	
+	if (addressDTO.getDoorNo().length()<1)  {
+			System.out.println("Address DoorNo is incorrect");
+			return false;
+	}
+	
+	if (String.valueOf(addressDTO.getPincode()).length() !=6)  {
+		System.out.println("Address Pincode is incorrect");
+        return false;
+	}
+	
+ 	if (addressDTO.getStreet() == null
+			|| addressDTO.getStreet().length() > 2
+			|| addressDTO.getStreet().length() < 100) {
+		System.err.println("Address Street is incorrect");
+		return false;
+		}
+	
+	
 	if (customerDTO.getAddressDTO() == null)  {
 		System.out.println("Customer Address DTO is incorrect");
 	     return false;
@@ -91,12 +133,8 @@ public class CustomerServiceImplementation implements CustomerService {
 		customerDAO.save(customerDTO);
 		 return true;
 	}
-	System.out.println("Customer DTO is null cannot be added");
-    return false;
-    
+	
 	}
-
-			
 	
 	@Override
 	public CustomerDTO findByName(String name) {
@@ -107,6 +145,14 @@ public class CustomerServiceImplementation implements CustomerService {
 		System.out.println("Name is not found");
 		return null;
 	}
+	
+	
+	
 }
+
+
+
+
+
 
 	

@@ -33,7 +33,7 @@ public class CustomerDAOImplementation implements CustomerDAO {
 	
 		if(name!=null)
 		{
-			int dtoFound=customerDTO.length;
+			
 		}
 		return null;
 	}
