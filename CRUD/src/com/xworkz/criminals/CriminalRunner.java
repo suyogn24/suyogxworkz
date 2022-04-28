@@ -1,13 +1,16 @@
 package com.xworkz.criminals;
 
+import com.xworkz.CriminalDTO.CriminalDTO;
+import com.xworkz.criminal.dao.CriminalService;
+
 public class CriminalRunner {
 
 	public static void main(String[] args) {
 		
-		CriminalDAO dto = new CriminalDTO();
-		criminaldao.save(null);
+		CriminalDTO dao = new CriminalDTO();
+	
 		
-		CriminalService criminalservice = new CriminalService(criminaldao);
+		CriminalService criminalservice = new CriminalService(dao);
 		
 		CriminalDTO dto = new CriminalDTO();
 		dto.setId(600);
@@ -15,7 +18,6 @@ public class CriminalRunner {
 		dto.setOffense("Robbery");
 		dto.setImprisonment(4);
 		dto.setJailName("Yerwada Pune");
-		criminaldao.save(dto);
 		
 		criminalservice.validateAndSave(dto);
 

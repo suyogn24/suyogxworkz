@@ -1,17 +1,17 @@
 package com.xworkz.criminal.dao;
 
-import com.xworkz.criminals.dto.CriminalDAO;
+import com.xworkz.CriminalDTO.CriminalDTO;
 
 public class CriminalService {
 	
 	private CriminalDAO dao;
 
-	public CriminalService(CriminalDAO dao) {
+	public CriminalService(CriminalDTO dao2) {
 		super();
-		this.dao = dao;
+		this.dao = (com.xworkz.criminal.dao.CriminalDAO) dao2;
 	}
 	
-	public void validateAndSave(com.xworkz.CriminalDTO.CriminalDTO dto)
+	public void validateAndSave(CriminalDTO dto)
 	{
 		if(dto!=null)
 		{
