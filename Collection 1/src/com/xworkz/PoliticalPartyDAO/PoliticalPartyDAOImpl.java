@@ -13,7 +13,6 @@ public class PoliticalPartyDAOImpl implements PoliticalPartyDAO {
 		
       List<PoliticalPartyDTO> list=new LinkedList<PoliticalPartyDTO>();
       
-         private int index=0,i=0;
 
 		   
 		 	@Override
@@ -25,7 +24,6 @@ public class PoliticalPartyDAOImpl implements PoliticalPartyDAO {
 		 			
 		 		list.add(dto);
 		 	    System.out.println(list);
-		 	    index++;
 		 	    return true;
 		 		}
 		 		
@@ -51,10 +49,9 @@ public class PoliticalPartyDAOImpl implements PoliticalPartyDAO {
 
 		 		
 		 		@Override
-		 		public PoliticalPartyDTO deleteByName(String name) {
+		 		public void deleteByName(String name) {
 		 		
-		 		System.out.println("finding name");
-		 		
+		 			
 		 	if(name!=null)
 		 	{
 		 			Iterator <PoliticalPartyDTO>  iterater=list.listIterator();
@@ -65,15 +62,12 @@ public class PoliticalPartyDAOImpl implements PoliticalPartyDAO {
 					{
 						iterater.remove();
 						System.out.println(list.size());
-						return dto;
-						
+						System.out.println("deleting name" + name);
 					}
 				}
 				
 		 	}
-		 	
-				return null;
-		 		
 		 		}
+		 		
 }
 

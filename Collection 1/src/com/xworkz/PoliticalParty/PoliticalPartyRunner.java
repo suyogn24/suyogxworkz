@@ -34,16 +34,7 @@ public class PoliticalPartyRunner {
 		
 		politicalpartyServices.deleteByName("SUYOG");	
 		
-		politicalpartyServices.ValidateAndSave(politicalPartyDTO3);
 		
-		PoliticalPartyDAOImpl daoImpl = new PoliticalPartyDAOImpl();
-		
-		
-          daoImpl.deleteByName("suyog");
-		  
-		  daoImpl.save(politicalPartyDTO3);
-		  
-		  
 	}
 	
 }

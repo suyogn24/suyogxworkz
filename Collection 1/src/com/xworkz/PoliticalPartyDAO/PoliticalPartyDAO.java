@@ -11,7 +11,7 @@ public interface PoliticalPartyDAO {
  
       boolean save(PoliticalPartyDTO dto);
       
-      PoliticalPartyDTO  deleteByName(String name);
+      void  deleteByName(String name);
 
 
 	
