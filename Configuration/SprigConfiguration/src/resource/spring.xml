@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+      <!-- Array Configuration -->
+      <bean id="arrayConfigBean" class="com.arrayconfig.ArrayConfig">
+            <property name="stateArray">
+                  <array>
+                        <value>Maharashtra</value>
+                        <value>Karnataka</value>
+                        <value>Gujarat</value>
+                        <value>Goa</value>
+                  </array>
+            </property>
+      </bean>
+</beans>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+<bean class="com.xworkz.headset.bean.HeadsetDTO"></bean>
+
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO1" id="headset1">
+      <constructor-arg value="Asus" type="String"/>
+      <constructor-arg value="2000" type="double"/>
+      <constructor-arg value="true" type="boolean"/>
+      <constructor-arg value="White" type="String"/>
+</bean>
+      
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO2" id="headset2">
+      <constructor-arg value="Samsung" type="String"/>
+      <constructor-arg value="1500" type="double"/>
+      <constructor-arg value="true" type="boolean"/>
+      <constructor-arg value="Blue" type="String"/>
+</bean>
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO3" id="headset3">
+      <constructor-arg value="Nokia" type="String"/>
+      <constructor-arg value="2500" type="double"/>
+      <constructor-arg value="false" type="boolean"/>
+      <constructor-arg value="Black" type="String"/>
+</bean>
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO4" id="headset4">
+      <constructor-arg value="Apple" type="String"/>
+      <constructor-arg value="3000" type="double"/>
+      <constructor-arg value="true" type="boolean"/>
+      <constructor-arg value="White" type="String"/>
+</bean>
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO5" id="headset5">
+      <constructor-arg value="Mi" type="String"/>
+      <constructor-arg value="1700" type="double"/>
+      <constructor-arg value="false" type="boolean"/>
+      <constructor-arg value="Yellow" type="String"/>
+</bean>
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO6" id="headset6">
+      <constructor-arg value="Realme" type="String"/>
+      <constructor-arg value="2355" type="double"/>
+      <constructor-arg value="true" type="boolean"/>
+      <constructor-arg value="Black" type="String"/>
+</bean>
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO7" id="headset7">
+      <constructor-arg value="Sony" type="String"/>
+      <constructor-arg value="1000" type="double"/>
+      <constructor-arg value="false" type="boolean"/>
+      <constructor-arg value="Black" type="String"/>
+</bean>
+
+<bean class ="com.xworkz.runner.HeadsetRunner.main(String[]).HeadsetDTO8" id="headset8">
+      <constructor-arg value="Boat" type="String"/>
+      <constructor-arg value="500" type="double"/>
+      <constructor-arg value="true" type="boolean"/>
+      <constructor-arg value="Red" type="String"/>
+</bean>
+
+
+</beans>
