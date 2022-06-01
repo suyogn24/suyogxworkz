@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<bean class="com.xworkz.mavenjdbc.Salary" id="salary">
+<constructor-arg value="550" type="java.lang.Double"/>
+<constructor-arg value="650" type="java.lang.Double"/>
+<property name="existingLoanAmount"  value="400"/>
+</bean>
+
+
+<bean class="com.xworkz.mavenjdbc.Loan" id="loan">
+<constructor-arg ref="salary" />
+<property name="provider" value="IDFC"/>
+</bean>
+
+
+
+</beans>
