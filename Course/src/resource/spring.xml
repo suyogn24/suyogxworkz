@@ -4,8 +4,12 @@
     xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
-<bean class="com.xworkz.mavenjdbc.FastFood"></bean>
+<bean class="com.xworkz.institute.dao.CourseDAOImpl" id="courseDAOImpl" ></bean>
 
+      <bean class="com.xworkz.institute.service.CourseServiceImpl" 
+          id="courseServiceImpl">
+          <constructor-arg ref="courseDAOImpl"/>
+      </bean>
 
 
 </beans>

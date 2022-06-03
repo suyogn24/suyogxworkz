@@ -2,14 +2,17 @@ package com.xworkz.institute.constants;
 
 public enum DBConstants {
 	
-	username("root"),password("9405453311s"),url("jdbc:mysql://localhost:3306/xworkzjan15");
+	USERNAME("root"),PASSWORD("9405453311s"),URL("jdbc:mysql://localhost:3306/xworkzjan15");
 	
-	public String value;
+	private String value;
 	
-	DBConstants(String string) {
+	DBConstants(String value) {
 		
-		this.value = value;
-		
+		System.out.println("Value");
+		this.value = value;			
 	}
-	
+
+	public String getValue() {
+		return value;
+	}
 }

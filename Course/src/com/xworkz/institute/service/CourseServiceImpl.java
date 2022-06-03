@@ -3,23 +3,26 @@ package com.xworkz.institute.service;
 import java.time.LocalDate;
 
 import com.xworkz.institute.dao.CourseDAO;
-import com.xworkz.institute.dao.CourseDAOImpl;
 import com.xworkz.institute.dto.CourseDTO;
 
 public class CourseServiceImpl implements CourseService  {
 
-	CourseDAO dao = new CourseDAOImpl();
-
+	private CourseDAO dao;
+	
+	public CourseServiceImpl(CourseDAO dao)  {
+		this.dao = dao;
+	}
+	
 	@Override
 	public boolean validate(CourseDTO dto) {
 	
 		if (dto !=null) {
 			LocalDate startDate = dto.getStartDate();
 			System.out.println("Validate the course details ==>");
-			if (dto.getName() != null && dto.getName().isEmpty() 
+			if (dto.getName() != null && !dto.getName().isEmpty() 
 					&& dto.getName().length() > 4 && dto.getName().length() < 30 
-					&& dto.getDuration() >= 0 && dto.getDuration() <= 6 
-					&& dto.getFees() < 50000 && dto.getFees() >= 0 
+					&& dto.getDuration() > 0 && dto.getDuration() < 6 
+					&& dto.getFees() < 50000 && dto.getFees() > 0 
 					&& startDate.isAfter(LocalDate.of(2022, 06, 02))) {
 				System.out.println("Details are given");
 				return true;
@@ -35,7 +38,8 @@ public class CourseServiceImpl implements CourseService  {
 	
 		if (validate(dto))  {
 			System.out.println("Save course details");
-            return dao.save(dto);	
+             dao.save(dto);	
+             return true;
 		}
 		
 		return false;

@@ -8,19 +8,20 @@ import java.sql.SQLException;
 import com.xworkz.institute.dto.CourseDTO;
 
 public class CourseDAOImpl implements CourseDAO   {
-
+	
+	
 	@Override
 	public boolean save(CourseDTO dto) {
 	
-		String insertQuery = "insert into Course_Details(id,name,duratin,fees,startDate,free) values(?,?,?,?,?,?)";
+		String insertQuery = "insert into course_details(id,name,duration,fees,startDate,free) values(?,?,?,?,?,?)";
 		
-		String url = "jdbc:mysql://localhost:3306/xworkzjan15";
+		String URL = "jdbc:mysql://localhost:3306/xworkz_Course";
 		
-		String username = "root";
-		String password = "9405453311s";
+		String USERNAME = "root";
+		String PASSWORD = "9405453311s";
 		
 		
-		try (Connection connection = DriverManager.getConnection(url, username, password);
+		try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 			PreparedStatement statement = connection.prepareStatement(insertQuery))  
 		
 		{
